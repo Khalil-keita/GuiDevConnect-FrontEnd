@@ -1,9 +1,9 @@
 <section class="topic-header">
   <div class="container">
     <div class="breadcrumbs">
-      <a routerLink="/">Accueil</a> / <a routerLink="/topics">Discussions</a> /
+      <a routerLink="/topics">Discussions</a> /
       <a routerLink="/topics/javascript">JavaScript</a> /
-      <span>Problème avec les Promises</span>
+      <span class="active">Problème avec les Promises</span>
     </div>
 
     <div class="topic-title-section">
@@ -154,7 +154,10 @@
       <div class="editor-toolbar">
         <button type="button"><i class="fas fa-bold"></i></button>
         <button type="button"><i class="fas fa-italic"></i></button>
-        <!-- Autres boutons d'édition -->
+        <button type="button"><i class="fas fa-underline"></i></button>
+        <button type="button"><i class="fas fa-copy"></i></button>
+        <button type="button"><i class="fas fa-paste"></i></button>
+        <button type="button"><i class="fas fa-trash"></i></button>
       </div>
       <textarea
         class="post-editor"
@@ -183,7 +186,27 @@
           <span class="views">1.4k vues</span>
         </div>
       </a>
-      <!-- 4 autres discussions -->
+      <a href="#" class="related-topic">
+        <h4>Comprendre les Promise.all</h4>
+        <div class="meta">
+          <span class="answers">15 réponses</span>
+          <span class="views">1.4k vues</span>
+        </div>
+      </a>
+      <a href="#" class="related-topic">
+        <h4>Comprendre les Promise.all</h4>
+        <div class="meta">
+          <span class="answers">15 réponses</span>
+          <span class="views">1.4k vues</span>
+        </div>
+      </a>
+      <a href="#" class="related-topic">
+        <h4>Comprendre les Promise.all</h4>
+        <div class="meta">
+          <span class="answers">15 réponses</span>
+          <span class="views">1.4k vues</span>
+        </div>
+      </a>
     </div>
   </div>
 </aside>

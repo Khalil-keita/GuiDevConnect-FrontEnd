@@ -26,12 +26,12 @@ export const routes: Routes = [
         title: 'Profil utilisateur'
       },
       {
-        path: 'discussions',
+        path: 'topics',
         loadComponent: () => import('./modules/shared/pages/topic/topic').then(m => m.Topic),
         title: 'Discussions'
       },
       {
-        path: 'detail-discussion',
+        path: 'topic/:slug/:id',
         loadComponent: () => import('./modules/shared/pages/topic/topic-detail/topic-detail').then(m => m.TopicDetail),
         title: 'Detail Discussion'
       }

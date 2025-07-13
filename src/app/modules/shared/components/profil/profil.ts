@@ -11,7 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class Profil {
   @Input() user: any;
-  @Input() isCurrentUser: boolean = true;
+  @Input() isCurrentUser: boolean = false;
 
   editingBio: boolean = false;
   editingSocialLinks: boolean = false;
@@ -25,6 +25,8 @@ export class Profil {
     { label: 'Commentaires', link: '/profile/comments' },
     { label: 'Enregistrés', link: '/profile/saved' }
   ];
+
+  date = new Date()
 
   ngOnInit() {
     // Initialiser les copies pour l'annulation

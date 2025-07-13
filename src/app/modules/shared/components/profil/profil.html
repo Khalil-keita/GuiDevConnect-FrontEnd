@@ -1,34 +1,25 @@
 <section class="profile-header mt-3">
   <div class="container">
-    <div
-      class="profile-banner"
-      style="background-image: linear-gradient(45deg, #4361ee, #7209b7)"
-    >
-      <div class="banner-placeholder">
-        <i class="fas fa-mountain"></i>
-      </div>
-    </div>
+    <div class="profile-banner"></div>
 
     <div class="profile-info">
       <div class="avatar-container">
-        <div class="profile-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <button class="edit-avatar" *ngIf="isCurrentUser">
+        <div class="profile-avatar"></div>
+        @if (isCurrentUser) {
+        <button class="edit-avatar">
           <i class="fas fa-camera"></i>
         </button>
+        }
       </div>
 
       <div class="profile-details">
         <div class="profile-name-container">
-          <h1>{{ user?.username ?? "kalil keita" }}</h1>
-          <button
-            class="btn-edit"
-            *ngIf="isCurrentUser"
-            (click)="editProfile()"
-          >
+          <h1>{{ user?.username ?? "Kalil keita" }}</h1>
+          @if(isCurrentUser){
+          <button class="btn-edit" (click)="editProfile()">
             <i class="fas fa-pencil-alt"></i>
           </button>
+          }
         </div>
 
         <p class="profile-title">
@@ -36,12 +27,12 @@
         </p>
 
         <div class="profile-meta">
-          <span *ngIf="user?.location"
-            ><i class="fas fa-map-marker-alt"></i> {{ user.location }}</span
+          <span
+            ><i class="fas fa-map-marker-alt"></i> Entag marché, Matoto</span
           >
           <span
             ><i class="fas fa-calendar-alt"></i> Membre depuis
-            {{ user?.joinDate | date : "MMMM yyyy" }}</span
+            {{ date | date : "MMMM yyyy" }}</span
           >
           <span
             ><i class="fas fa-eye"></i> {{ user?.profileViews ?? 10 }} vues du
@@ -50,20 +41,22 @@
         </div>
 
         <div class="profile-badges">
-          <span class="badge gold" *ngIf="user?.isTopContributor">
+          <span class="badge gold">
             <i class="fas fa-award"></i> Top Contributor
           </span>
-          <span class="badge silver" *ngIf="user?.isVerified">
+          <span class="badge silver">
             <i class="fas fa-check-circle"></i> Verified
           </span>
-          <span class="badge" *ngFor="let badge of user?.badges">{{
-            badge
-          }}</span>
+          <span
+            class="badge"
+            *ngFor="let badge of ['Mentor', 'Moderateur', 'Plume']"
+            >{{ badge }}</span
+          >
         </div>
       </div>
 
       <div class="profile-actions">
-        <button class="btn btn-outline" *ngIf="!isCurrentUser">
+        <button class="btn btn-outline">
           <i class="fas fa-envelope"></i> Message
         </button>
         <button
@@ -99,7 +92,7 @@
   <div class="container">
     <div class="profile-main">
       <!-- Section Bio Éditable -->
-      <div class="bio-section" *ngIf="isCurrentUser || user.bio">
+      <div class="bio-section" >
         <div class="section-header">
           <h2>À propos</h2>
           <button class="btn-edit" *ngIf="isCurrentUser" (click)="editBio()">
@@ -112,8 +105,10 @@
         </div>
 
         <div *ngIf="!editingBio; else bioEditor">
-          <p class="profile-bio" *ngIf="user?.bio; else emptyBio">
-            {{ user?.bio || "Super bio de l'utilisateur" }}
+          <p class="profile-bio">
+            {{
+              user?.bio || "Super bio de l'utilisateur sur devCommunity forum"
+            }}
           </p>
           <ng-template #emptyBio>
             <p class="empty-bio" *ngIf="isCurrentUser" (click)="editBio()">
@@ -140,88 +135,87 @@
         </ng-template>
       </div>
 
-      <!-- Autres sections... -->
-    </div>
-
-    <aside class="profile-sidebar">
-      <!-- Section Réseaux Sociaux Éditable -->
-      <div class="sidebar-section">
-        <div class="section-header">
-          <h3>Réseaux</h3>
-          <button
-            class="btn-edit"
-            *ngIf="isCurrentUser"
-            (click)="editSocialLinks()"
-          >
-            <i
-              class="fas"
-              [class.fa-pencil-alt]="!editingSocialLinks"
-              [class.fa-save]="editingSocialLinks"
-            ></i>
-          </button>
-        </div>
-
-        <div *ngIf="!editingSocialLinks; else socialLinksEditor">
-          <div
-            class="profile-links"
-            *ngIf="hasSocialLinks(); else emptySocialLinks"
-          >
-            <a
-              *ngFor="let link of user.socialLinks"
-              [href]="link.url"
-              target="_blank"
-              class="profile-link"
-            >
-              <i [class]="'fab fa-' + link.icon"></i> {{ link.displayText }}
-            </a>
-          </div>
-          <ng-template #emptySocialLinks>
-            <p
-              class="empty-links"
+      <aside class="profile-sidebar">
+        <!-- Section Réseaux Sociaux Éditable -->
+        <div class="sidebar-section">
+          <div class="section-header">
+            <h3>Réseaux</h3>
+            <button
+              class="btn-edit"
               *ngIf="isCurrentUser"
               (click)="editSocialLinks()"
             >
-              <i class="fas fa-plus-circle"></i> Ajoutez vos liens sociaux
-            </p>
+              <i
+                class="fas"
+                [class.fa-pencil-alt]="!editingSocialLinks"
+                [class.fa-save]="editingSocialLinks"
+              ></i>
+            </button>
+          </div>
+
+          <div *ngIf="!editingSocialLinks; else socialLinksEditor">
+            <div class="profile-links">
+              <a href="#" target="_blank" class="profile-link">
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+              <a href="#" target="_blank" class="profile-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" target="_blank" class="profile-link">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" target="_blank" class="profile-link">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
+            <ng-template #emptySocialLinks>
+              <p
+                class="empty-links"
+                *ngIf="isCurrentUser"
+                (click)="editSocialLinks()"
+              >
+                <i class="fas fa-plus-circle"></i> Ajoutez vos liens sociaux
+              </p>
+            </ng-template>
+          </div>
+
+          <ng-template #socialLinksEditor>
+            <div
+              class="social-link-editor"
+              *ngFor="let link of user.socialLinks; let i = index"
+            >
+              <select [(ngModel)]="link.platform" class="form-control">
+                <option value="github">GitHub</option>
+                <option value="twitter">Twitter</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="website">Site Web</option>
+              </select>
+              <input
+                type="text"
+                [(ngModel)]="link.url"
+                placeholder="URL"
+                class="form-control"
+              />
+              <button class="btn btn-icon" (click)="removeSocialLink(i)">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <button class="btn btn-outline btn-block" (click)="addSocialLink()">
+              <i class="fas fa-plus"></i> Ajouter un lien
+            </button>
+            <div class="social-actions">
+              <button class="btn btn-primary" (click)="saveSocialLinks()">
+                Enregistrer
+              </button>
+              <button class="btn btn-outline" (click)="cancelEditSocialLinks()">
+                Annuler
+              </button>
+            </div>
           </ng-template>
         </div>
 
-        <ng-template #socialLinksEditor>
-          <div
-            class="social-link-editor"
-            *ngFor="let link of user.socialLinks; let i = index"
-          >
-            <select [(ngModel)]="link.platform" class="form-control">
-              <option value="github">GitHub</option>
-              <option value="twitter">Twitter</option>
-              <option value="linkedin">LinkedIn</option>
-              <option value="website">Site Web</option>
-            </select>
-            <input
-              type="text"
-              [(ngModel)]="link.url"
-              placeholder="URL"
-              class="form-control"
-            />
-            <button class="btn btn-icon" (click)="removeSocialLink(i)">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          <button class="btn btn-outline btn-block" (click)="addSocialLink()">
-            <i class="fas fa-plus"></i> Ajouter un lien
-          </button>
-          <div class="social-actions">
-            <button class="btn btn-primary" (click)="saveSocialLinks()">
-              Enregistrer
-            </button>
-            <button class="btn btn-outline" (click)="cancelEditSocialLinks()">
-              Annuler
-            </button>
-          </div>
-        </ng-template>
-      </div>
-
-      <!-- Autres sections sidebar... -->
-    </aside>
+        <!-- Autres sections sidebar... -->
+      </aside>
+    </div>
   </div>
 </section>
