@@ -37,4 +37,8 @@
   /* Transitions */
   --transition: all 0.2s ease-in-out;
   --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Dégradés */
+  --primary-linear-gradient: linear-gradient(45deg, #4361ee, #7209b7);
+   --secondary-linear-gradient: linear-gradient(to right, var(--primary), var(--accent))
 }

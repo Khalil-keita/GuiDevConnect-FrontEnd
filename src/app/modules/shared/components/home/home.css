@@ -1,7 +1,7 @@
-.hero {
+.hero-section {
   position: relative;
   padding: var(--space-2xl) 0;
-  background: linear-gradient(45deg, #4361ee, #7209b7);
+  background: var(--primary-linear-gradient);
   color: var(--white);
   overflow: hidden;
 }
@@ -26,8 +26,11 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  max-width: 700px;
-  line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    color: var(--dark);
+    opacity: .9;
 }
 
 .hero-cta {
@@ -141,7 +144,7 @@
 .feature-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(to right, var(--primary), var(--accent));
+  background: var(--secondary-linear-gradient);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -250,22 +253,24 @@
 .topic-card {
   background: var(--white);
   border-radius: var(--radius-md);
-  overflow: hidden;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
   position: relative;
 }
 
 .topic-badge {
-  position: absolute;
-  top: var(--space-sm);
-  right: var(--space-sm);
   background-color: var(--accent);
   color: var(--white);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 500;
+  max-width: 70px;
+  position: absolute;
+  right: -15px;
+  top: -5px;
+  opacity: .8;
+  box-shadow: var( --shadow);
 }
 
 .topic-content {
@@ -295,6 +300,7 @@
   margin-bottom: var(--space-sm);
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -305,6 +311,7 @@
   margin-bottom: var(--space-md);
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.5;
@@ -363,6 +370,8 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: var(--space-lg);
   max-width: 1200px;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }

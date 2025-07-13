@@ -16,7 +16,7 @@
               />
             </svg>
           </span>
-          <span class="logo-text">DevForum</span>
+          <span class="logo-text">DevCommunity</span>
         </a>
         <p class="footer-description">
           La communauté des développeurs passionnés par l'échange de
@@ -29,8 +29,11 @@
           <a href="#" aria-label="Twitter" class="social-link">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" aria-label="Discord" class="social-link">
-            <i class="fab fa-discord"></i>
+          <a href="#" aria-label="Facebook" class="social-link">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-link">
+            <i class="fab fa-instagram"></i>
           </a>
         </div>
       </div>
@@ -40,7 +43,9 @@
           <h4 class="links-title">Explorer</h4>
           <ul class="links-list">
             <li><a routerLink="/" class="footer-link">Accueil</a></li>
-            <li><a routerLink="/topics" class="footer-link">Sujets</a></li>
+            <li>
+              <a routerLink="/discussions" class="footer-link">Discussions</a>
+            </li>
             <li><a routerLink="/about" class="footer-link">À propos</a></li>
           </ul>
         </div>
@@ -48,9 +53,7 @@
         <div class="links-column">
           <h4 class="links-title">Ressources</h4>
           <ul class="links-list">
-            <li><a href="#" class="footer-link">Documentation</a></li>
-            <li><a href="#" class="footer-link">Blog</a></li>
-            <li><a href="#" class="footer-link">FAQ</a></li>
+            <li><a routerLink="/contact" class="footer-link">FAQ</a></li>
           </ul>
         </div>
 
@@ -70,9 +73,11 @@
     </div>
 
     <div class="footer-copyright">
-      <p>© 2023 DevForum. Tous droits réservés.</p>
+      <p>© {{ currentYear() }} DevCommunity. Tous droits réservés.</p>
       <div class="footer-extra">
-        <span>Made with <i class="fas fa-heart"></i> by devs for devs</span>
+        <span
+          >Créée <i class="fas fa-heart"></i> par les devs pour les devs</span
+        >
       </div>
     </div>
   </div>

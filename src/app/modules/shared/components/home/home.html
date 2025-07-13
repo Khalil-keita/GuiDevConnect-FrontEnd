@@ -1,520 +1,17 @@
-<style>
-  /* ===================== */
-  /* HERO SECTION - MODERN */
-  /* ===================== */
-  .hero-section {
-    position: relative;
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-    color: white;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  .hero-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-text {
-    flex: 1;
-    animation: fadeInUp 0.8s ease;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    max-width: 600px;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .hero-image-container {
-    flex: 1;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .hero-image {
-    max-width: 100%;
-    height: auto;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-  }
-
-  .stat-item {
-    text-align: center;
-    animation: fadeIn 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: calc(var(--order) * 0.2s);
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(to right, #fff, #f8f9fa);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  /* ===================== */
-  /* FEATURES SECTION */
-  /* ===================== */
-  .features-section {
-    padding: 5rem 0;
-    background-color: white;
-    position: relative;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .feature-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-color: transparent;
-  }
-
-  .feature-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(to right, #4361ee, #7209b7);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .feature-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  .feature-description {
-    color: #64748b;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    flex-grow: 1;
-  }
-
-  .feature-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #4361ee;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    margin-top: auto;
-  }
-
-  .feature-link:hover {
-    color: #3a0ca3;
-  }
-
-  .feature-link i {
-    transition: transform 0.2s ease;
-  }
-
-  .feature-link:hover i {
-    transform: translateX(3px);
-  }
-
-  /* ===================== */
-  /* TOPICS SECTION */
-  /* ===================== */
-  .topics-section {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
-    position: relative;
-  }
-
-  .topics-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-  }
-
-  .topics-filter {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    background: none;
-    border: 1px solid #dee2e6;
-    color: #6c757d;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background-color: #4361ee;
-    border-color: #4361ee;
-    color: white;
-  }
-
-  .topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .topic-card {
-    background: white;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: relative;
-  }
-
-  .topic-badge {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    background-color: #4cc9f0;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-
-  .topic-content {
-    padding: 1.5rem;
-  }
-
-  .topic-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-    font-size: 0.85rem;
-  }
-
-  .topic-category {
-    background-color: #f1f5f9;
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #4361ee;
-  }
-
-  .topic-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .topic-excerpt {
-    color: #6c757d;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .topic-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    border-top: 1px solid #f1f5f9;
-  }
-
-  .topic-author {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .topic-avatar {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .topic-stats {
-    display: flex;
-    gap: 1rem;
-    color: #6c757d;
-    font-size: 0.85rem;
-  }
-
-  /* ===================== */
-  /* TECHNOLOGIES SECTION */
-  /* ===================== */
-  .technologies-section {
-    padding: 4rem 0;
-    background-color: white;
-    position: relative;
-  }
-
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .tech-card {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    background-color: #f8f9fa;
-  }
-
-  .tech-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .tech-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    color: #4361ee;
-  }
-
-  .tech-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .tech-card p {
-    font-size: 0.85rem;
-    color: #6c757d;
-  }
-
-  /* ===================== */
-  /* CTA SECTION */
-  /* ===================== */
-  .cta-section {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
-    position: relative;
-  }
-
-  .cta-card {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    text-align: center;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  .cta-card h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .cta-card p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: #6c757d;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* ===================== */
-  /* ANIMATIONS */
-  /* ===================== */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  /* ===================== */
-  /* RESPONSIVE */
-  /* ===================== */
-  @media (max-width: 992px) {
-    .hero-content {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .hero-cta,
-    .cta-buttons {
-      justify-content: center;
-    }
-
-    .hero-image-container {
-      min-height: 300px;
-      order: -1;
-      margin-bottom: 2rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero-section,
-    .features-section,
-    .topics-section,
-    .technologies-section,
-    .cta-section {
-      padding: 3rem 0;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .topics-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .mt-4 {
-      margin-top: 1.5rem;
-    }
-  }
-
-  /* Classes utilitaires */
-  .text-center {
-    text-align: center;
-  }
-
-  .mt-4 {
-    margin-top: 1.5rem;
-  }
-</style>
-
 <section class="hero-section">
   <div class="hero-content">
     <h1 class="hero-title">
       Rejoignez la communauté des développeurs passionnés
     </h1>
-    <p class="hero-subtitle text-dark">
+    <p class="hero-subtitle">
       Partagez vos connaissances, trouvez des solutions et progressez ensemble
       dans un environnement bienveillant.
     </p>
     <div class="hero-cta">
-      <a routerLink="/register" class="btn btn-primary btn-lg"
+      <a routerLink="/auth/register" class="btn btn-primary"
         >Commencer maintenant</a
       >
-      <a href="#features" class="btn btn-outline-white btn-lg">Découvrir</a>
+      <a href="#features" class="btn btn-outline-white">Découvrir</a>
     </div>
   </div>
 
@@ -548,7 +45,7 @@
           Échangez avec une communauté bienveillante et progressez ensemble sur
           les dernières technologies.
         </p>
-        <a href="#" class="feature-link">
+        <a routerLink="/discussions" class="feature-link">
           Rejoindre les discussions <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -562,7 +59,7 @@
           Obtenez de l'aide pour vos projets et aidez les autres à surmonter
           leurs blocages.
         </p>
-        <a href="#" class="feature-link"
+        <a routerLink="/discussions" class="feature-link"
           >Explorer les discussions <i class="fas fa-arrow-right"></i
         ></a>
       </div>
@@ -576,7 +73,7 @@
           Bénéficiez du soutien d'une communauté active pour résoudre vos
           problèmes techniques et partager vos connaissances.
         </p>
-        <a href="#" class="feature-link">
+        <a routerLink="/auth/register" class="feature-link">
           Rejoindre la communauté <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -627,11 +124,163 @@
         </div>
       </div>
 
-      <!-- 5 autres cartes de sujets similaires -->
+      <div class="topic-card">
+        <div class="topic-badge">Nouveau</div>
+        <div class="topic-content">
+          <div class="topic-meta">
+            <span class="topic-category">JavaScript</span>
+            <span class="topic-time">Il y a 2h</span>
+          </div>
+          <h3 class="topic-title">
+            Problème avec React Hooks et les mises à jour d'état
+          </h3>
+          <p class="topic-excerpt">
+            Je rencontre un comportement inattendu avec useEffect lorsque
+            j'essaie de mettre à jour mon état basé sur un état précédent...
+          </p>
+          <div class="topic-footer">
+            <div class="topic-author">
+              <img
+                src="assets/images/avatars/avatar1.jpg"
+                alt="Auteur"
+                class="topic-avatar"
+              />
+              <span>MarieDupont</span>
+            </div>
+            <div class="topic-stats">
+              <span class="topic-stat"><i class="fas fa-comment"></i> 12</span>
+              <span class="topic-stat"><i class="fas fa-eye"></i> 145</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-badge">Nouveau</div>
+        <div class="topic-content">
+          <div class="topic-meta">
+            <span class="topic-category">JavaScript</span>
+            <span class="topic-time">Il y a 2h</span>
+          </div>
+          <h3 class="topic-title">
+            Problème avec React Hooks et les mises à jour d'état
+          </h3>
+          <p class="topic-excerpt">
+            Je rencontre un comportement inattendu avec useEffect lorsque
+            j'essaie de mettre à jour mon état basé sur un état précédent...
+          </p>
+          <div class="topic-footer">
+            <div class="topic-author">
+              <img
+                src="assets/images/avatars/avatar1.jpg"
+                alt="Auteur"
+                class="topic-avatar"
+              />
+              <span>MarieDupont</span>
+            </div>
+            <div class="topic-stats">
+              <span class="topic-stat"><i class="fas fa-comment"></i> 12</span>
+              <span class="topic-stat"><i class="fas fa-eye"></i> 145</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-badge">Nouveau</div>
+        <div class="topic-content">
+          <div class="topic-meta">
+            <span class="topic-category">JavaScript</span>
+            <span class="topic-time">Il y a 2h</span>
+          </div>
+          <h3 class="topic-title">
+            Problème avec React Hooks et les mises à jour d'état
+          </h3>
+          <p class="topic-excerpt">
+            Je rencontre un comportement inattendu avec useEffect lorsque
+            j'essaie de mettre à jour mon état basé sur un état précédent...
+          </p>
+          <div class="topic-footer">
+            <div class="topic-author">
+              <img
+                src="assets/images/avatars/avatar1.jpg"
+                alt="Auteur"
+                class="topic-avatar"
+              />
+              <span>MarieDupont</span>
+            </div>
+            <div class="topic-stats">
+              <span class="topic-stat"><i class="fas fa-comment"></i> 12</span>
+              <span class="topic-stat"><i class="fas fa-eye"></i> 145</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-badge">Nouveau</div>
+        <div class="topic-content">
+          <div class="topic-meta">
+            <span class="topic-category">JavaScript</span>
+            <span class="topic-time">Il y a 2h</span>
+          </div>
+          <h3 class="topic-title">
+            Problème avec React Hooks et les mises à jour d'état
+          </h3>
+          <p class="topic-excerpt">
+            Je rencontre un comportement inattendu avec useEffect lorsque
+            j'essaie de mettre à jour mon état basé sur un état précédent...
+          </p>
+          <div class="topic-footer">
+            <div class="topic-author">
+              <img
+                src="assets/images/avatars/avatar1.jpg"
+                alt="Auteur"
+                class="topic-avatar"
+              />
+              <span>MarieDupont</span>
+            </div>
+            <div class="topic-stats">
+              <span class="topic-stat"><i class="fas fa-comment"></i> 12</span>
+              <span class="topic-stat"><i class="fas fa-eye"></i> 145</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-badge">Nouveau</div>
+        <div class="topic-content">
+          <div class="topic-meta">
+            <span class="topic-category">JavaScript</span>
+            <span class="topic-time">Il y a 2h</span>
+          </div>
+          <h3 class="topic-title">
+            Problème avec React Hooks et les mises à jour d'état
+          </h3>
+          <p class="topic-excerpt">
+            Je rencontre un comportement inattendu avec useEffect lorsque
+            j'essaie de mettre à jour mon état basé sur un état précédent...
+          </p>
+          <div class="topic-footer">
+            <div class="topic-author">
+              <img
+                src="assets/images/avatars/avatar1.jpg"
+                alt="Auteur"
+                class="topic-avatar"
+              />
+              <span>MarieDupont</span>
+            </div>
+            <div class="topic-stats">
+              <span class="topic-stat"><i class="fas fa-comment"></i> 12</span>
+              <span class="topic-stat"><i class="fas fa-eye"></i> 145</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="text-center mt-4">
-      <a routerLink="/topics" class="btn btn-outline"
+      <a routerLink="/discussions" class="btn btn-outline"
         >Voir toutes les discussions</a
       >
     </div>
@@ -650,8 +299,41 @@
         <h3>React</h3>
         <p>1,245 discussions</p>
       </div>
-
-      <!-- 11 autres technologies -->
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i class="fab fa-angular"></i>
+        </div>
+        <h3>Angular</h3>
+        <p>1,245 discussions</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i class="fab fa-node"></i>
+        </div>
+        <h3>NodeJs</h3>
+        <p>1,245 discussions</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i class="fab fa-php"></i>
+        </div>
+        <h3>Php</h3>
+        <p>1,245 discussions</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i class="fab fa-laravel"></i>
+        </div>
+        <h3>Laravel</h3>
+        <p>1,245 discussions</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i class="fab fa-symfony"></i>
+        </div>
+        <h3>Symfony</h3>
+        <p>1,245 discussions</p>
+      </div>
     </div>
   </div>
 </section>
@@ -665,10 +347,8 @@
         dès maintenant.
       </p>
       <div class="cta-buttons">
-        <a routerLink="/register" class="btn btn-primary btn-lg">S'inscrire</a>
-        <a routerLink="/about" class="btn btn-outline-white btn-lg"
-          >En savoir plus</a
-        >
+        <a routerLink="/auth/register" class="btn btn-primary">S'inscrire</a>
+        <a routerLink="/about" class="btn btn-outline-white">En savoir plus</a>
       </div>
     </div>
   </div>

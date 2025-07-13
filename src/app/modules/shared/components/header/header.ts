@@ -9,12 +9,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
-logout() {
-throw new Error('Method not implemented.');
-}
   protected menuOpen = false;
-user: any;
-isAuthenticated: any;
+  protected menuUserOpen = false;
+  protected user: any;
+  protected isAuthenticated: boolean = false;
 
   public toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -25,6 +23,14 @@ isAuthenticated: any;
     } else {
       document.body.style.overflow = '';
     }
+  }
+
+  public toggleUserMenu() {
+    this.menuUserOpen = !this.menuUserOpen;
+  }
+
+  public logout() {
+    throw new Error('Method not implemented.');
   }
 
 }

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+input, textarea, radio, selec{
+  background-color: transparent!important;
+  color: var(--dark);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -29,7 +34,6 @@ h4 { font-size: 1.25rem; margin-bottom: var(--space-sm); }
 
 p {
   margin-bottom: var(--space-md);
-  color: var(--dark-gray);
 }
 
 a {
@@ -50,7 +54,7 @@ a {
 }
 
 .section-title {
-  text-align: center;
+  text-align: center!important;
   margin-bottom: var(--space-xl);
   position: relative;
 }

@@ -121,7 +121,7 @@
   gap: var(--space-xs);
   text-align: center;
   font-size: 0.85rem;
-  color: var(--light-gray);
+  color: var(--light-gray)!important;
 }
 
 .footer-extra {

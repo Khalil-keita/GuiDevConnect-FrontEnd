@@ -6,42 +6,73 @@
 
   /* Hero Section */
   .about-hero {
-    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+    background: var(--primary-linear-gradient);
     color: white;
     padding: 80px 0;
     text-align: center;
   }
 
   .about-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
   }
 
   .about-hero .lead {
     font-size: 1.25rem;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 1rem auto;
+    font-weight: 400;
+    color: var(--dark);
+    opacity: .9;
   }
 
   /* Values Section */
+
   .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    gap: var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
   }
 
   .value-card {
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 10px;
-    background: #f8f9fa;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: var(--transition-slow);
+    border: 1px solid var(--light-gray);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .value-card:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
   }
 
   .value-icon {
-    font-size: 2rem;
-    color: #4361ee;
-    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--secondary-linear-gradient);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .value-title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
   }
 
   /* Story Section */
