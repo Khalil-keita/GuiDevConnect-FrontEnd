@@ -1,0 +1,189 @@
+<section class="topic-header">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a routerLink="/">Accueil</a> / <a routerLink="/topics">Discussions</a> /
+      <a routerLink="/topics/javascript">JavaScript</a> /
+      <span>Problème avec les Promises</span>
+    </div>
+
+    <div class="topic-title-section">
+      <h1>Problème avec les Promises et async/await</h1>
+      <div class="topic-meta">
+        <div class="author-info">
+          <img src="assets/images/avatars/avatar4.jpg" alt="Auteur" />
+          <div>
+            <a href="#" class="author-name">DevNewbie</a>
+            <span class="post-date">Posté le 15 juin 2023</span>
+          </div>
+        </div>
+        <div class="topic-actions">
+          <button class="btn btn-outline">
+            <i class="far fa-bookmark"></i> Sauvegarder
+          </button>
+          <button class="btn btn-outline">
+            <i class="fas fa-share-alt"></i> Partager
+          </button>
+          <button class="btn btn-outline">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topic-content">
+  <div class="container">
+    <div class="post-container">
+      <div class="post-voting">
+        <button class="vote-btn upvote">
+          <i class="fas fa-chevron-up"></i>
+        </button>
+        <span class="vote-count">24</span>
+        <button class="vote-btn downvote">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <span class="solution-badge"
+          ><i class="fas fa-check"></i> Solution</span
+        >
+      </div>
+
+      <div class="post-main">
+        <div class="post-body">
+          <p>
+            Je rencontre un problème avec l'utilisation des Promises combinées à
+            async/await. Voici mon code :
+          </p>
+
+          <div class="code-block">
+            <pre><code class="language-javascript">{{ codeExample1 }}</code></pre>
+            <button class="copy-btn"><i class="far fa-copy"></i></button>
+          </div>
+
+          <p>
+            Le problème survient lorsque l'API met trop de temps à répondre...
+          </p>
+        </div>
+
+        <div class="post-footer">
+          <div class="tags">
+            <a href="#" class="tag">javascript</a>
+            <a href="#" class="tag">promises</a>
+            <a href="#" class="tag">async-await</a>
+          </div>
+          <div class="actions">
+            <button class="action-btn">
+              <i class="far fa-comment"></i> Répondre
+            </button>
+            <button class="action-btn">
+              <i class="far fa-flag"></i> Signaler
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="answers-header">
+      <h2>8 Réponses</h2>
+      <div class="sort-options">
+        <span>Trier par :</span>
+        <select>
+          <option>Meilleures</option>
+          <option>Récentes</option>
+          <option>Anciennes</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="answer-list">
+      <div class="answer">
+        <div class="post-voting">
+          <button class="vote-btn upvote active">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          <span class="vote-count">42</span>
+          <button class="vote-btn downvote">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="answer-main">
+          <div class="answer-header">
+            <div class="author-info">
+              <img src="assets/images/avatars/avatar5.jpg" alt="Auteur" />
+              <div>
+                <a href="#" class="author-name">PromiseMaster</a>
+                <span class="post-date">Répondu le 15 juin 2023</span>
+              </div>
+            </div>
+            <span class="accepted-badge"
+              ><i class="fas fa-check"></i> Solution acceptée</span
+            >
+          </div>
+
+          <div class="answer-body">
+            <p>
+              Vous devriez ajouter un timeout à votre fetch. Voici comment faire
+              :
+            </p>
+
+            <div class="code-block">
+              <pre><code class="language-javascript">{{ codeExample }}</code></pre>
+              <button class="copy-btn"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
+
+          <div class="answer-footer">
+            <div class="actions">
+              <button class="action-btn">
+                <i class="far fa-thumbs-up"></i> Utile (24)
+              </button>
+              <button class="action-btn">
+                <i class="far fa-comment"></i> Répondre
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 autres réponses -->
+    </div>
+
+    <div class="answer-form">
+      <h3>Votre réponse</h3>
+      <div class="editor-toolbar">
+        <button type="button"><i class="fas fa-bold"></i></button>
+        <button type="button"><i class="fas fa-italic"></i></button>
+        <!-- Autres boutons d'édition -->
+      </div>
+      <textarea
+        class="post-editor"
+        placeholder="Écrivez votre réponse ici..."
+      ></textarea>
+      <div class="form-footer">
+        <div class="editor-help">
+          <a href="#"
+            ><i class="fas fa-question-circle"></i> Aide sur le markdown</a
+          >
+        </div>
+        <button class="btn btn-primary">Publier la réponse</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<aside class="related-topics">
+  <div class="container">
+    <h3>Discussions similaires</h3>
+    <div class="related-list">
+      <a href="#" class="related-topic">
+        <h4>Comprendre les Promise.all</h4>
+        <div class="meta">
+          <span class="answers">15 réponses</span>
+          <span class="views">1.4k vues</span>
+        </div>
+      </a>
+      <!-- 4 autres discussions -->
+    </div>
+  </div>
+</aside>

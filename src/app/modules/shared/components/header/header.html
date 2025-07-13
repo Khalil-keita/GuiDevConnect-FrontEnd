@@ -1,0 +1,109 @@
+<!-- Nouveau header.component.html -->
+<header class="forum-header">
+  <div class="container">
+    <div class="header-left">
+      <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a routerLink="/" class="logo">
+        <span class="logo-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+          >
+            <path
+              fill="currentColor"
+              d="M13 3v10h8V3h-8zm0 18h8v-8h-8v8zM3 21h8v-8H3v8zm0-10h8V3H3v8z"
+            />
+          </svg>
+        </span>
+        <span class="logo-text">DevCommunity</span>
+      </a>
+      <nav class="main-nav-desktop">
+        <a routerLink="/" class="nav-link" routerLinkActived="active">Accueil</a>
+        <a routerLink="/discussions" class="nav-link" routerLinkActive="active"
+          >Discussions</a
+        >
+        <a routerLink="/" class="nav-link" routerLinkActive="active"
+          >Apprendre</a
+        >
+        <a routerLink="/" class="nav-link" routerLinkActive="active"
+          >Événements</a
+        >
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input
+          type="text"
+          placeholder="Rechercher..."
+          aria-label="Rechercher"
+        />
+      </div>
+      <div class="auth-actions" *ngIf="!isAuthenticated">
+        <a routerLink="/auth/login" class="btn btn-outline">Connexion</a>
+        <a routerLink="/auth/register" class="btn btn-primary">S'inscrire</a>
+      </div>
+      <div class="user-menu" *ngIf="isAuthenticated">
+        <button class="user-avatar" (click)="toggleMenu()">
+          <img [src]="user.avatar" alt="Profil" width="32" height="32" />
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-menu" [class.show]="menuOpen">
+          <a routerLink="/profile" class="dropdown-item">
+            <i class="fas fa-user"></i> Mon profil
+          </a>
+          <a routerLink="/settings" class="dropdown-item">
+            <i class="fas fa-cog"></i> Paramètres
+          </a>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i> Déconnexion
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.active]="menuOpen">
+    <div class="mobile-menu-header">
+      <button class="close-btn" (click)="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a routerLink="/" class="mobile-nav-link" (click)="toggleMenu()"
+        >Accueil</a
+      >
+      <a routerLink="/" class="mobile-nav-link" (click)="toggleMenu()"
+        >Discussions</a
+      >
+      <a routerLink="/" class="mobile-nav-link" (click)="toggleMenu()"
+        >Apprendre</a
+      >
+      <a routerLink="/" class="mobile-nav-link" (click)="toggleMenu()"
+        >Événements</a
+      >
+      <div class="mobile-auth-actions">
+        <a
+          routerLink="/auth/login"
+          class="btn btn-outline"
+          (click)="toggleMenu()"
+          >Connexion</a
+        >
+        <a
+          routerLink="/auth/register"
+          class="btn btn-primary"
+          (click)="toggleMenu()"
+          >S'inscrire</a
+        >
+      </div>
+    </nav>
+  </div>
+  <div class="overlay" [class.active]="menuOpen" (click)="toggleMenu()"></div>
+</header>

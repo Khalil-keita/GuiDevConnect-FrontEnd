@@ -1,0 +1,134 @@
+<section class="topics-header">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a routerLink="/">Accueil</a> / <span>Discussions</span>
+    </div>
+
+    <div class="header-content">
+      <h1>Toutes les discussions</h1>
+      <p>
+        Explorez les conversations de notre communauté ou démarrez la vôtre.
+      </p>
+
+      <div class="actions">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Rechercher des discussions..." />
+        </div>
+        <a routerLink="/topics/new" class="btn btn-primary"
+          >Nouvelle discussion</a
+        >
+      </div>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="tab active">Toutes</button>
+      <button class="tab">Populaires</button>
+      <button class="tab">Non répondues</button>
+      <button class="tab">Récentes</button>
+      <button class="tab">Suivies</button>
+    </div>
+  </div>
+</section>
+
+<section class="topics-main">
+  <div class="container">
+    <div class="topics-list">
+      <div class="topic-row header-row">
+        <div class="col-main">Sujet</div>
+        <div class="col-replies">Réponses</div>
+        <div class="col-views">Vues</div>
+        <div class="col-activity">Activité</div>
+      </div>
+
+      <div class="topic-row">
+        <div class="col-main">
+          <div class="topic-title">
+            <a routerLink="/topics/123"
+              >Problème avec les hooks React dans Next.js 13</a
+            >
+          </div>
+          <div class="topic-meta">
+            <span class="badge badge-solved">Résolu</span>
+            <span class="category">React</span>
+            <span class="author">Par <a href="#">JeanDev</a></span>
+          </div>
+        </div>
+        <div class="col-replies">
+          <span class="count">24</span>
+        </div>
+        <div class="col-views">
+          <span class="count">1.2k</span>
+        </div>
+        <div class="col-activity">
+          <span class="time">Il y a 2h</span>
+          <span class="last-user">par <a href="#">SarahCode</a></span>
+        </div>
+      </div>
+
+      <!-- 15 autres discussions -->
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn disabled">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span class="ellipsis">...</span>
+      <button class="page-btn">8</button>
+      <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <h3>Catégories populaires</h3>
+    <ul class="category-list">
+      <li>
+        <a href="#">JavaScript <span class="count">1.2k</span></a>
+      </li>
+      <li>
+        <a href="#">React <span class="count">845</span></a>
+      </li>
+      <li>
+        <a href="#">Node.js <span class="count">632</span></a>
+      </li>
+      <li>
+        <a href="#">CSS <span class="count">587</span></a>
+      </li>
+      <li>
+        <a href="#">Python <span class="count">521</span></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Ressources utiles</h3>
+    <ul class="resource-list">
+      <li>
+        <a href="#"><i class="fas fa-book"></i> Règles du forum</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-graduation-cap"></i> Guide du débutant</a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-tags"></i> Étiquettes populaires</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section contributors">
+    <h3>Top contributeurs</h3>
+    <div class="contributor">
+      <img src="assets/images/avatars/avatar3.jpg" alt="Contributeur" />
+      <div class="info">
+        <a href="#">CodeMaster</a>
+        <span class="points">12.5k points</span>
+      </div>
+    </div>
+    <!-- 4 autres contributeurs -->
+  </div>
+</aside>

@@ -1,0 +1,105 @@
+<section class="auth-section">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Créer un compte</h1>
+        <p>Rejoignez notre communauté de développeurs</p>
+      </div>
+
+      <form class="auth-form">
+        <div class="form-group">
+          <label for="register-username">Nom d'utilisateur</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="register-username"
+              placeholder="devExplorer42"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="register-email">Email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              id="register-email"
+              placeholder="votre@email.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="register-password">Mot de passe</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="register-password"
+              placeholder="••••••••"
+              required
+              minlength="8"
+            />
+            <button
+              type="button"
+              class="show-password"
+              aria-label="Afficher le mot de passe"
+            >
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="password-strength">
+            <div class="strength-meter"></div>
+            <span class="strength-text">Force du mot de passe</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="register-confirm">Confirmer le mot de passe</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="register-confirm"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="terms-checkbox">
+            <input type="checkbox" required />
+            J'accepte les <a href="#">conditions d'utilisation</a> et la
+            <a href="#">politique de confidentialité</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          S'inscrire
+        </button>
+
+        <div class="auth-divider">
+          <span>ou</span>
+        </div>
+
+        <div class="social-auth">
+          <button type="button" class="btn btn-outline btn-social">
+            <i class="fab fa-google"></i> S'inscrire avec Google
+          </button>
+          <button type="button" class="btn btn-outline btn-social">
+            <i class="fab fa-github"></i> S'inscrire avec GitHub
+          </button>
+        </div>
+
+        <div class="auth-footer">
+          <p>Déjà membre ? <a href="login.html">Se connecter</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

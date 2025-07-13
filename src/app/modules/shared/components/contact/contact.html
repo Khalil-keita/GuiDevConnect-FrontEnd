@@ -1,0 +1,210 @@
+<!-- Page Contact - Version complète et autonome -->
+<section class="contact-hero">
+  <div class="container">
+    <h1>Contactez notre équipe</h1>
+    <p class="lead">
+      Une question, une suggestion ou simplement envie d'échanger ? Nous sommes
+      à votre écoute.
+    </p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Formulaire de contact -->
+      <div class="contact-form-container">
+        <h2><i class="fas fa-paper-plane"></i> Envoyez-nous un message</h2>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Votre nom complet</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="ex: Jean Dupont"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="ex: votre@email.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet de votre message</label>
+            <select id="subject" class="form-control" required>
+              <option value="" disabled selected>Choisissez une option</option>
+              <option value="technical">Support technique</option>
+              <option value="account">Problème de compte</option>
+              <option value="suggestion">Suggestion d'amélioration</option>
+              <option value="partnership">Demande de partenariat</option>
+              <option value="other">Autre demande</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              class="form-control"
+              rows="6"
+              placeholder="Décrivez votre demande en détails..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Envoyer le message
+            </button>
+            <p class="form-notice">
+              Nous nous engageons à vous répondre sous 48h maximum
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Informations de contact -->
+      <div class="contact-info">
+        <h2><i class="fas fa-info-circle"></i> Autres moyens de contact</h2>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <div class="info-content">
+            <h3>Par email</h3>
+            <p>
+              <a href="mailto:contact@devforum.com">contact&#64;devforum.com</a>
+            </p>
+            <p>
+              <a href="mailto:support@devforum.com">support&#64;devforum.com</a>
+              (assistance technique)
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="info-content">
+            <h3>Par téléphone</h3>
+            <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+            <p>Du lundi au vendredi, de 9h à 18h (heure de Paris)</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div class="info-content">
+            <h3>En personne</h3>
+            <address>
+              <p>42 Rue du Développement</p>
+              <p>75013 Paris, France</p>
+              <p>Sur rendez-vous uniquement</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="social-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Discord"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">
+      <i class="fas fa-question-circle"></i> Questions fréquentes
+    </h2>
+
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Comment créer un compte sur DevForum ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Pour créer un compte :</p>
+          <ol>
+            <li>Cliquez sur "S'inscrire" en haut à droite</li>
+            <li>
+              Renseignez votre email et choisissez un mot de passe sécurisé
+            </li>
+            <li>Confirmez votre email via le lien reçu</li>
+            <li>Complétez votre profil</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Quel est le délai moyen de réponse ?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Nous nous engageons à répondre :</p>
+          <ul>
+            <li>Sous 24h pour les questions urgentes (bugs critiques)</li>
+            <li>Sous 48h pour les demandes standards</li>
+            <li>Sous 72h pour les demandes complexes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ajoutez 3 autres questions ici -->
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <h2 class="section-title">
+      <i class="fas fa-map-pin"></i> Notre localisation
+    </h2>
+    <div class="map-container">
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i>
+        <p>42 Rue du Développement, 75013 Paris</p>
+        <a
+          href="https://maps.google.com"
+          class="btn btn-outline"
+          target="_blank"
+        >
+          <i class="fas fa-directions"></i> Voir sur Google Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
