@@ -1,0 +1,370 @@
+<div class="admin-container">
+  <!-- Sidebar Navigation -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-header">
+      <a routerLink="/" class="logo">
+        <span class="logo-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+          >
+            <path
+              fill="currentColor"
+              d="M13 3v10h8V3h-8zm0 18h8v-8h-8v8zM3 21h8v-8H3v8zm0-10h8V3H3v8z"
+            />
+          </svg>
+        </span>
+        <span class="logo-text">DevCommunity</span>
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item active">
+          <a href="#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Tableau de bord</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fas fa-comments"></i>
+            <span>Discussions</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fas fa-users"></i>
+            <span>Membres</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fas fa-layer-group"></i>
+            <span>Catégories</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fas fa-flag"></i>
+            <span>Signalements</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <span>Paramètres</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <div class="avatar">
+          <img src="https://via.placeholder.com/40" alt="Admin" />
+        </div>
+        <div class="user-info">
+          <span class="username">Admin</span>
+          <span class="role">Administrateur</span>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline btn-block">
+        <i class="fas fa-sign-out-alt"></i>
+        Déconnexion
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-content">
+    <header class="admin-header">
+      <div class="header-left">
+        <button class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1>Tableau de bord</h1>
+      </div>
+      <div class="header-right">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Rechercher..." />
+        </div>
+        <div class="notifications">
+          <button class="notification-btn">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-inner">
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon bg-primary">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3>1,245</h3>
+            <p>Membres</p>
+          </div>
+          <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 12%</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon bg-accent">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="stat-info">
+            <h3>5,678</h3>
+            <p>Discussions</p>
+          </div>
+          <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 8%</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon bg-success">
+            <i class="fas fa-reply"></i>
+          </div>
+          <div class="stat-info">
+            <h3>23,456</h3>
+            <p>Réponses</p>
+          </div>
+          <div class="stat-trend down">
+            <i class="fas fa-arrow-down"></i> 3%
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon bg-warning">
+            <i class="fas fa-flag"></i>
+          </div>
+          <div class="stat-info">
+            <h3>24</h3>
+            <p>Signalements</p>
+          </div>
+          <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 5%</div>
+        </div>
+      </div>
+
+      <!-- Recent Activity and Quick Actions -->
+      <div class="content-grid">
+        <div class="recent-activity">
+          <div class="card">
+            <div class="card-header">
+              <h3>Activité récente</h3>
+              <a href="#" class="btn btn-outline btn-sm">Voir tout</a>
+            </div>
+            <div class="card-body">
+              <ul class="activity-list">
+                <li>
+                  <div class="activity-avatar">
+                    <img src="https://via.placeholder.com/40" alt="User" />
+                  </div>
+                  <div class="activity-content">
+                    <p>
+                      <strong>Jean Dupont</strong> a répondu à la discussion
+                      <a href="#">"Problème avec le login"</a>
+                    </p>
+                    <small>Il y a 15 minutes</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="activity-avatar">
+                    <img src="https://via.placeholder.com/40" alt="User" />
+                  </div>
+                  <div class="activity-content">
+                    <p>
+                      <strong>Marie Martin</strong> a créé une nouvelle
+                      discussion <a href="#">"Question sur les paramètres"</a>
+                    </p>
+                    <small>Il y a 1 heure</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="activity-avatar">
+                    <img src="https://via.placeholder.com/40" alt="User" />
+                  </div>
+                  <div class="activity-content">
+                    <p>
+                      <strong>Admin</strong> a supprimé une discussion
+                      inappropriée
+                    </p>
+                    <small>Il y a 2 heures</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="activity-avatar">
+                    <img src="https://via.placeholder.com/40" alt="User" />
+                  </div>
+                  <div class="activity-content">
+                    <p>
+                      <strong>Pierre Lambert</strong> a signalé un commentaire
+                    </p>
+                    <small>Il y a 3 heures</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="activity-avatar">
+                    <img src="https://via.placeholder.com/40" alt="User" />
+                  </div>
+                  <div class="activity-content">
+                    <p>
+                      Nouveau membre: <strong>Sophie Bernard</strong> s'est
+                      inscrit
+                    </p>
+                    <small>Il y a 5 heures</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <div class="card">
+            <div class="card-header">
+              <h3>Actions rapides</h3>
+            </div>
+            <div class="card-body">
+              <div class="actions-grid">
+                <a href="#" class="action-card">
+                  <div class="action-icon bg-primary">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                  <h4>Créer une catégorie</h4>
+                </a>
+
+                <a href="#" class="action-card">
+                  <div class="action-icon bg-accent">
+                    <i class="fas fa-user-shield"></i>
+                  </div>
+                  <h4>Gérer les rôles</h4>
+                </a>
+
+                <a href="#" class="action-card">
+                  <div class="action-icon bg-success">
+                    <i class="fas fa-bullhorn"></i>
+                  </div>
+                  <h4>Créer une annonce</h4>
+                </a>
+
+                <a href="#" class="action-card">
+                  <div class="action-icon bg-warning">
+                    <i class="fas fa-flag"></i>
+                  </div>
+                  <h4>Voir les signalements</h4>
+                </a>
+              </div>
+
+              <div class="recent-reports">
+                <h4>Signalements récents</h4>
+                <div class="report-item">
+                  <div class="report-content">
+                    <p>Commentaire inapproprié dans "Discussion générale"</p>
+                    <small>Signalé par 3 membres</small>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn btn-outline btn-sm">Examiner</button>
+                  </div>
+                </div>
+                <div class="report-item">
+                  <div class="report-content">
+                    <p>Spam dans "Présentations"</p>
+                    <small>Signalé par 1 membre</small>
+                  </div>
+                  <div class="report-actions">
+                    <button class="btn btn-outline btn-sm">Examiner</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Members -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Nouveaux membres</h3>
+          <a href="#" class="btn btn-outline btn-sm">Gérer les membres</a>
+        </div>
+        <div class="card-body">
+          <div class="members-grid">
+            <div class="member-card">
+              <div class="member-avatar">
+                <img src="https://via.placeholder.com/80" alt="Member" />
+              </div>
+              <div class="member-info">
+                <h4>Sophie Bernard</h4>
+                <p>Membre depuis: Aujourd'hui</p>
+                <div class="member-stats">
+                  <span><i class="fas fa-comments"></i> 0</span>
+                  <span><i class="fas fa-thumbs-up"></i> 0</span>
+                </div>
+              </div>
+              <div class="member-actions">
+                <button class="btn btn-outline btn-sm">Profil</button>
+              </div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-avatar">
+                <img src="https://via.placeholder.com/80" alt="Member" />
+              </div>
+              <div class="member-info">
+                <h4>Thomas Leroy</h4>
+                <p>Membre depuis: Hier</p>
+                <div class="member-stats">
+                  <span><i class="fas fa-comments"></i> 2</span>
+                  <span><i class="fas fa-thumbs-up"></i> 5</span>
+                </div>
+              </div>
+              <div class="member-actions">
+                <button class="btn btn-outline btn-sm">Profil</button>
+              </div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-avatar">
+                <img src="https://via.placeholder.com/80" alt="Member" />
+              </div>
+              <div class="member-info">
+                <h4>Laura Petit</h4>
+                <p>Membre depuis: 2 jours</p>
+                <div class="member-stats">
+                  <span><i class="fas fa-comments"></i> 1</span>
+                  <span><i class="fas fa-thumbs-up"></i> 3</span>
+                </div>
+              </div>
+              <div class="member-actions">
+                <button class="btn btn-outline btn-sm">Profil</button>
+              </div>
+            </div>
+
+            <div class="member-card">
+              <div class="member-avatar">
+                <img src="https://via.placeholder.com/80" alt="Member" />
+              </div>
+              <div class="member-info">
+                <h4>Marc Dubois</h4>
+                <p>Membre depuis: 3 jours</p>
+                <div class="member-stats">
+                  <span><i class="fas fa-comments"></i> 5</span>
+                  <span><i class="fas fa-thumbs-up"></i> 12</span>
+                </div>
+              </div>
+              <div class="member-actions">
+                <button class="btn btn-outline btn-sm">Profil</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

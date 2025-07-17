@@ -62,5 +62,11 @@ export const routes: Routes = [
         title: 'Inscription'
       },
     ]
+  },
+
+  {
+    path: 'admin',
+    loadComponent: () => import('./modules/shared/components/admin-template/admin-template').then(m => m.AdminTemplate),
+    title: 'Administration'
   }
 ];

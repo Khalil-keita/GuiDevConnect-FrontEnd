@@ -1,59 +1,50 @@
-# FrontEnd
+# GuiDevConnect-FrontEnd
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+# 🇬🇳 GuiDevConnect – Frontend
 
-## Development server
+**GuiDevConnect** est une plateforme communautaire dédiée aux développeurs guinéens. Elle offre un espace d’échange, de partage et de collaboration autour des technologies web, mobiles, cloud et plus encore.
 
-To start a local development server, run:
+---
+
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?&style=flat-square&logo=angular&logoColor=white)
+![Made with ❤️ in Guinea](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20in%20Guinea-red?style=flat-square)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC--BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+## 🚀 À propos du projet
+
+**GuiDevConnect** vise à :
+
+- Rassembler la communauté tech guinéenne
+- Faciliter le partage de connaissances et de ressources
+- Créer un réseau local fort de développeurs
+- Encourager l'open source et les collaborations locales
+
+## 🖥️ Technologies utilisées
+
+- ⚙️ **Framework** : Angular (v20+)
+- 🎨 **UI/UX** : PrimeNG / Bootstrap
+- 💬 **API** : RESTful backend en .NET
+- 🔐 Authentification sécurisée via JWT / OAuth
+
+## 📸 Aperçu (bientôt)
+
+_Ajoute ici des captures d'écran de l'interface pour illustrer le design._
+
+---
+
+## 🛠️ Installation
 
 ```bash
+# 1. Clone le repo
+git clone https://github.com/votre-username/guidevconnect-frontend.git
+
+# 2. Va dans le dossier
+cd guidevconnect-frontend
+
+# 3. Installe les dépendances
+npm install
+
+# 4. Lance le projet
 ng serve
+>>>>>>> e228ffc8bb133da3f041d36402fec4ef7011a346
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
