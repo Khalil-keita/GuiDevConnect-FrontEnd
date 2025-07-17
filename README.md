@@ -7,7 +7,8 @@
 
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?&style=flat-square&logo=angular&logoColor=white)
 ![Made with ❤️ in Guinea](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20in%20Guinea-red?style=flat-square)
-![License](https://img.shields.io/github/license/Khalil-keita/GuiDevConnect-FrontEnd?style=flat-square)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC--BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 
 ## 🚀 À propos du projet
 
