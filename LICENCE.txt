@@ -1,0 +1,11 @@
+## 📄 Licence
+
+Ce projet est sous licence **Creative Commons BY-NC-ND 4.0**.  
+Cela signifie :
+
+- 🧠 Attribution obligatoire (tu dois citer l’auteur)
+- 🚫 Pas d’utilisation commerciale sans autorisation
+- 🛠️ Pas de modification ou de redistribution sans accord
+
+Pour tout usage autre que personnel ou éducatif, merci de contacter : [keitakalil200@gmail.com]  
+Texte complet : [https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.fr](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.fr)
