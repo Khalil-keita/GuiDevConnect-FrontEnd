@@ -46,5 +46,4 @@ npm install
 
 # 4. Lance le projet
 ng serve
->>>>>>> e228ffc8bb133da3f041d36402fec4ef7011a346
 ```
